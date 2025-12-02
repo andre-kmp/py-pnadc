@@ -17,8 +17,7 @@ To install the package locally to download and read the microdata:
 
 Para instalar o pacote localmente para baixar e ler os microdados:
 
-```
-bash
+```bash
 git clone https://github.com/SEU-USUARIO/py-pnadc.git
 cd py-pnadc
 pip install -e
