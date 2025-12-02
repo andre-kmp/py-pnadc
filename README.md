@@ -14,15 +14,17 @@ Pacote em Python com ferramentas para baixar e ler os microdados da **Pesquisa N
 
 ### Development mode (local)
 To install the package locally to download and read the microdata:
+
 Para instalar o pacote localmente para baixar e ler os microdados:
 
-
+```
 bash
 git clone [https://github.com/SEU-USUARIO/py-pnadc.git](https://github.com/SEU-USUARIO/py-pnadc.git)
 cd py-pnadc
 pip install -e
-
+```
 
 ## ⚠️  Disclaimer / Isenção de responsabilidade
 This is an unofficial project and is not affiliated with IBGE.
+
 Este é um projeto não-oficial e não possui afiliação com o IBGE.
