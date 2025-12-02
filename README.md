@@ -1,12 +1,12 @@
 # py-pnadc: Unofficial Python Package for PNADcIBGE
 
 ## About this package
-This Python package contains tools for downloading and reading the microdata from the *Continuous National Household Sample Survey (PNAD Contínua)* from Brazilian Institute of Geography and Statistics (IBGE). 
+This Python package contains tools for downloading and reading the microdata from the **Continuous National Household Sample Survey (PNAD Contínua)** from Brazilian Institute of Geography and Statistics (IBGE). 
 
 It provides a pythonic alternative to the [R official package](https://github.com/Gabriel-Assuncao/PNADcIBGE).
 
 ## Sobre este pacote
-Pacote em Python com ferramentas para baixar e ler os microdados da *Pesquisa Nacional de Domicílios Contínua (PNADC)* do Instituto Brasileiro de Geografia e Estatística (IBGE).
+Pacote em Python com ferramentas para baixar e ler os microdados da **Pesquisa Nacional de Domicílios Contínua (PNADC)** do Instituto Brasileiro de Geografia e Estatística (IBGE).
 
 É uma alternativa pythonica ao [pacote oficial em R](https://github.com/Gabriel-Assuncao/PNADcIBGE).
 
