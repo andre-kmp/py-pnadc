@@ -20,7 +20,7 @@ cd py-pnadc
 pip install -e
 ```
 
-### :warning:  Disclaimer / Isenção de responsabilidade
+### :warning:  Disclaimer
 This is an unofficial project and is not affiliated with IBGE.
 
 ## :brazil: Português
