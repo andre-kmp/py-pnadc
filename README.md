@@ -1,6 +1,6 @@
 # py-pnadc: Unofficial Python Package for PNADcIBGE
 
-🇺🇸 [English](##us-english)  / 🇧🇷 [Português](##brazil-portugues)
+🇺🇸 [English](#us-english)  / 🇧🇷 [Português](#brazil-portugues)
 
 ## :us: English
 
