@@ -9,7 +9,7 @@ columns_to_keep = [
 
 download_years = [2023, 2024, 2025]
 
-processing_years = [2024]
+processing_years = [2024, 2025]
 
 chunk_size = 25000
 
