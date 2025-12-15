@@ -14,8 +14,9 @@ def download_microdata(years=download_years, output_dir=microdata_dir):
         years (list): List of years (ex: [2023, 2024]). If None, downloads the current year.
         output_dir (str): Directory to save the files.
     """
-    if years is None:
-        years = [2024] # Safe default
+
+    if years is not None and isinstance(years, (int, str)):
+        years = [years]
         
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)

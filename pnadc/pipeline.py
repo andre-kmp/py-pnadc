@@ -18,7 +18,7 @@ def load_microdata(columns_to_keep=columns_to_keep, load_years=processing_years,
     layout_pnadc_path = utils.download_fixed_width_layout()
 
     downloads.download_microdata(years=load_years)
-    parquet_path = utils.set_parquet_path()
+    parquet_path = utils.set_parquet_path(years=load_years)
     final_parquet_file = processing.txt_to_parquet(output_path=parquet_path, 
                                                    layout_path=layout_pnadc_path, 
                                                    chunk_size=chunk_size,
