@@ -1,4 +1,4 @@
-COLUMNS_TO_KEEP = [
+columns_to_keep = [
     'Ano', 'Trimestre', 'UF', 'UPA', 'V1008', 'V1014', 'V2003', # Chaves
     'V2007', 'V2009', 'V2010', 'VD3004', # Demografia
     'V1028', # Peso
@@ -7,8 +7,12 @@ COLUMNS_TO_KEEP = [
     'V4029' # Carteira assinada
 ]
 
-TARGET_YEARS_DOWNLOAD = [2023, 2024, 2025]
+download_years = [2023, 2024, 2025]
 
-TARGET_YEARS_PROCESSING = [2024]
+processing_years = [2024]
 
-CHUNK_SIZE = 25000
+chunk_size = 25000
+
+microdata_dir = './data/pnadc_microdata'
+
+layout_dir = './data/cache/'

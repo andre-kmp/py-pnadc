@@ -1,0 +1,9 @@
+bs4
+chardet
+io
+os
+pandas
+re
+requests
+urllib
+zipfile

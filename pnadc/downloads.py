@@ -3,9 +3,10 @@ import os
 import requests
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-from . import constants
+from .constants import FTP_BASE_URL
+from .settings import download_years, microdata_dir
 
-def download_microdata(years=None, output_dir="./data/pnadc_microdata"):
+def download_microdata(years=download_years, output_dir=microdata_dir):
     """
     Download the specified .zip microdata files of PNADC to the specified years.
     
@@ -21,7 +22,7 @@ def download_microdata(years=None, output_dir="./data/pnadc_microdata"):
         print(f"Created directory: {output_dir}")
 
     for year in years:
-        year_url = f"{constants.FTP_BASE_URL}/{year}/"
+        year_url = f"{FTP_BASE_URL}/{year}/"
         print(f"\n--- Looking for data from: {year} ---")
 
         try:

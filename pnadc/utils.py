@@ -5,14 +5,15 @@ import chardet
 import zipfile
 import requests
 from . import constants
+from .settings import processing_years, layout_dir
 
 
-def download_input(output_dir='./data_cache'):
+def download_fixed_width_layout(output_dir=layout_dir):
     """
     Downloads the specific version of the input dictionary defined in constants.py.
 
     Args:
-        output_dir (str): Directory where the file will be saved. Defaults to './data_cache'.
+        output_dir (str): Directory where the file will be saved. Defaults to './data/data_cache'.
     
     Return:
         str: Complete path to the extracted .txt file
@@ -20,8 +21,8 @@ def download_input(output_dir='./data_cache'):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    target_url = constants.INPUT_ZIP_URL
-    print(f"Downloading input dictionary (Version {constants.INPUT_VERSION_DATE})...")
+    target_url = constants.LAYOUT_ZIP_URL
+    print(f"Downloading input dictionary (Version {constants.LAYOUT_VERSION_DATE})...")
     print(f"Source: {target_url}")
 
     try:
@@ -35,7 +36,7 @@ def download_input(output_dir='./data_cache'):
             ]
             
             if not input_files:
-                raise FileNotFoundError(f".txt file not found in: {constants.INPUT_ZIP_FILENAME}")
+                raise FileNotFoundError(f".txt file not found in: {constants.LAYOUT_ZIP_URL}")
             
             target_file = input_files[0]
             z.extract(target_file, output_dir)
@@ -65,13 +66,13 @@ def detect_encoding(filepath):
     return result['encoding']
 
 
-def parse_input_metadata(filepath, encoding):
+def parse_layout_metadata(filepath, encoding):
     """
     Reads the script and returns the metadata to read the fixed-witdh file (FWF).
 
     Args:
-        filepath (str): Complete path to the .txt input file.
-        encoding (str): The detected encoding of the input file.
+        filepath (str): Complete path to the .txt layout file.
+        encoding (str): The detected encoding of the layout file.
     
     Return:
         names (list of strs): List of the columns names.
@@ -80,7 +81,7 @@ def parse_input_metadata(filepath, encoding):
     """
 
     with open(filepath, encoding=encoding) as file:
-        input_content = file.read()
+        layout_content = file.read()
     
     names = []
     widths = []
@@ -98,7 +99,7 @@ def parse_input_metadata(filepath, encoding):
     
     pattern = re.compile(r'@\d+\s+(\w+)\s+(\$?)(\d+)\.')
 
-    for line in input_content.splitlines():
+    for line in layout_content.splitlines():
         match = pattern.search(line)
         if match:
             var_name = match.group(1)
@@ -117,3 +118,7 @@ def parse_input_metadata(filepath, encoding):
                 dtypes[var_name] = "float32"
             
     return names, widths, dtypes
+
+def set_parquet_path(years=processing_years, base_dir='./data'):
+    years_str = '_'.join(str(year) for year in years)
+    return f"{base_dir}/pnadc_microdata_{years_str}.parquet"
