@@ -1,6 +1,6 @@
 #!usr/bin/env python3
 
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 __author__ = "André Klaic"
 
 from .pipeline import load_microdata
