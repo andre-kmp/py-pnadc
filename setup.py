@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="py-pnadc", 
-    version="0.1.2",
+    version="0.1.3",
     author="André Klaic",
     author_email="andreklaic@gmail.com",
     description="Unofficial package for PNADC microdata (IBGE)",
@@ -24,11 +24,6 @@ setup(
         "fastparquet",
         "requests",
         "bs4",
-        "urljoin",
         "chardet",
-        "io",
-        "zipfile",
-        "os",
-        "re"
     ],
 )
