@@ -19,8 +19,13 @@ It provides a pythonic alternative to the [R official package](https://github.co
 
 ### Installation / Instalação
 
-#### Development mode (local)
-To install the package locally to download and read the microdata:
+#### PyPI:
+
+```bash
+pip install py-pnadc
+```
+
+#### Developer mode:
 
 ```bash
 git clone https://github.com/andre-kmp/py-pnadc.git
@@ -92,9 +97,13 @@ Esse pacote resolve os problemas comuns ao lidar com os arquivos de texto gigant
 
 ### Instalação
 
-#### Modo de desenvolvedor (local)
+#### Via PyPI:
 
-Para instalar o pacote localmente para baixar e ler os microdados:
+```bash
+pip install py-pnadc
+```
+
+#### Modo de desenvolvedor:
 
 ```bash
 git clone https://github.com/andre-kmp/py-pnadc.git
